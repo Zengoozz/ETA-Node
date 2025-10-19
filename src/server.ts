@@ -1,7 +1,7 @@
 // Initition point for the server application
 
 import http from "node:http";
-import app from "./app.js"; // ← لاحظ الامتداد .js لأنه ESM
+import app from "./App.js"; // ← لاحظ الامتداد .js لأنه ESM
 import dotenv from "dotenv";
 
 dotenv.config();
