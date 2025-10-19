@@ -3,9 +3,27 @@
   "version": "1.0.0",
   "description": "api-node",
   "main": "server.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc",
+    "start": "node --enable-source-maps dist/server.js",
+    "dev:build": "tsc -w",
+    "dev": "nodemon --watch src --ext ts --exec \"npm run build && node dist/server.js\"",
     "test": "test"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.8.1",
+    "eslint": "^9.38.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
 }
